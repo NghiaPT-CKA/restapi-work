@@ -111,7 +111,7 @@ public class WorkControllerTest {
 				.readValue(result.getResponse().getContentAsString(), BaseResponse.class);
 		
 		// Compare results
-		assertEquals(StatusResponse.SUCCESS.toString(), baseResponse.getStatus());
+		assertEquals(StatusResponse.FAIL.toString(), baseResponse.getStatus());
 	}
 	
 	/**
@@ -137,7 +137,7 @@ public class WorkControllerTest {
 				.collect(Collectors.toList());
 		
 		// Compare results
-		assertEquals(StatusResponse.FAIL.toString(), baseResponse.getStatus());
+		assertEquals(StatusResponse.SUCCESS.toString(), baseResponse.getStatus());
 	}
 	
 	/**
@@ -147,7 +147,6 @@ public class WorkControllerTest {
 	 * 
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
 	@Test
 	public void test004() throws Exception {
 		// Prepare input update
@@ -203,7 +202,6 @@ public class WorkControllerTest {
 	 * 
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
 	@Test
 	public void test005() throws Exception {
 		// Prepare input update

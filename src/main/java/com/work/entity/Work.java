@@ -28,18 +28,18 @@ public class Work {
 	/** Name */
 	private String name;
 	/** Starting date */
-	@JsonFormat(pattern="yyyyMMdd")
+	@JsonFormat(pattern = "yyyyMMdd")
 	private LocalDate startingDate;
 	/** Ending date */
-	@JsonFormat(pattern="yyyyMMdd")
+	@JsonFormat(pattern = "yyyyMMdd")
 	private LocalDate endingDate;
 	/** Status */
 	private String status;
 	/** Create date */
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime createDate;
 	/** Update date */
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime updateDate;
 
 	public Work() {
@@ -49,9 +49,9 @@ public class Work {
 		super();
 		this.id = id;
 		this.name = inputMap.get("name") == null ? null : inputMap.get("name");
-		this.startingDate = inputMap.get("startingDate") == null ? null 
+		this.startingDate = inputMap.get("startingDate") == null ? null
 				: DateTimeUtils.stringToLocalDate(inputMap.get("startingDate"));
-		this.endingDate = inputMap.get("endingDate") == null ? null 
+		this.endingDate = inputMap.get("endingDate") == null ? null
 				: DateTimeUtils.stringToLocalDate(inputMap.get("endingDate"));
 		this.status = inputMap.get("status");
 	}

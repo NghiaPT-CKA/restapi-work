@@ -1,7 +1,5 @@
 package com.work.model;
 
-import java.time.LocalDateTime;
-
 public class WorkModel {
 	private Integer id;
 	/** Name */
